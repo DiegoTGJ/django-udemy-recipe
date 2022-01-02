@@ -20,7 +20,7 @@ class PublicIngredientsApiTests(TestCase):
         self.client = APIClient()
 
     def test_login_required(self):
-        """ Test that login is required for retrieving tags """
+        """ Test that login is required for retrieving ingredients """
         res = self.client.get(INGREDIENTS_URL)
         self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
 
